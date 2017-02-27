@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qWY-iV-TaV">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7VH-cD-gcG">
+            <objects>
+                <navigationController id="qWY-iV-TaV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s35-lT-VcY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Epl-qW-30u" kind="relationship" relationship="rootViewController" id="86U-dv-SRx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKK-TJ-RpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="-28"/>
+        </scene>
+        <!--二维码-->
+        <scene sceneID="mTX-aO-Ab0">
+            <objects>
+                <viewController id="Epl-qW-30u" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0qz-QE-lqP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nwi-ol-ljU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zgy-wn-1n7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fc-xu-EtG">
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.66274509800000003" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="QBZ-bV-NMi"/>
+                                    <constraint firstAttribute="height" constant="30" id="lXu-rO-3Rv"/>
+                                </constraints>
+                                <state key="normal" title="生成二维码"/>
+                                <connections>
+                                    <action selector="BtnClick:" destination="Epl-qW-30u" eventType="touchUpInside" id="4re-x3-wso"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0fc-xu-EtG" firstAttribute="leading" secondItem="zgy-wn-1n7" secondAttribute="leadingMargin" constant="133" id="EU9-RT-GaC"/>
+                            <constraint firstItem="0fc-xu-EtG" firstAttribute="top" secondItem="0qz-QE-lqP" secondAttribute="bottom" constant="254" id="bu3-vO-NJD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="二维码" id="SJ3-cZ-EBt"/>
+                    <connections>
+                        <outlet property="ViewLeftConstant" destination="EU9-RT-GaC" id="oZ3-fq-mgJ"/>
+                        <outlet property="ViewTopConstant" destination="bu3-vO-NJD" id="pP4-HR-JVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MD4-d2-BEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="-45"/>
+        </scene>
+    </scenes>
+</document>
